@@ -22,9 +22,9 @@ class PendaftaranReguler extends Pendaftaran {
         return $db->query($query);
     }
 
-    // Implementasi abstract method dari class induk
+    // Overriding method dari class induk (Tarif Standar)
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar; 
+        return $this->biayaPendaftaranDasar;
     }
 
     public function tampilkanInfoJalur() {

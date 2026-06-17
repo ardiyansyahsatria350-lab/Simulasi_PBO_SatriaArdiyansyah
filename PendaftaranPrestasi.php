@@ -22,9 +22,9 @@ class PendaftaranPrestasi extends Pendaftaran {
         return $db->query($query);
     }
 
-    // Implementasi abstract method dari class induk
+    // Overriding method dari class induk (Diskon Rp50.000)
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar; 
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
     public function tampilkanInfoJalur() {

@@ -22,9 +22,9 @@ class PendaftaranKedinasan extends Pendaftaran {
         return $db->query($query);
     }
 
-    // Implementasi abstract method dari class induk
+    // Overriding method dari class induk (Surcharge 25%)
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar; 
+        return $this->biayaPendaftaranDasar * 1.25;
     }
 
     public function tampilkanInfoJalur() {
